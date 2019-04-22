@@ -10,6 +10,16 @@ namespace Fiap.Lac.Apresentacao
 {
     class Program
     {
+        static readonly string Welcome = @"__/\\\\\\\\\\\\\\\__/\\\\\\\\\\\_____/\\\\\\\\\_____/\\\\\\\\\\\\\___        
+ _\/\\\///////////__\/////\\\///____/\\\\\\\\\\\\\__\/\\\/////////\\\_       
+  _\/\\\_________________\/\\\______/\\\/////////\\\_\/\\\_______\/\\\_      
+   _\/\\\\\\\\\\\_________\/\\\_____\/\\\_______\/\\\_\/\\\\\\\\\\\\\/__     
+    _\/\\\///////__________\/\\\_____\/\\\\\\\\\\\\\\\_\/\\\/////////____    
+     _\/\\\_________________\/\\\_____\/\\\/////////\\\_\/\\\_____________   
+      _\/\\\_________________\/\\\_____\/\\\_______\/\\\_\/\\\_____________  
+       _\/\\\______________/\\\\\\\\\\\_\/\\\_______\/\\\_\/\\\_____________ 
+        _\///______________\///////////__\///________\///__\///______________
+";
         static void Main(string[] args)
         {
             IList<Token> tokens = new List<Token>();
@@ -19,16 +29,29 @@ namespace Fiap.Lac.Apresentacao
             tokens.Add(new Token() { Nome = "end_of_statement", Descricao = "fim de instrucao", Padrao = new Regex("[;]"), DeveEstarTabelaSimbolos = false });
             tokens.Add(new Token() { Nome = "open_parentheses", Descricao = "abertura parenteses", Padrao = new Regex("[(]"), DeveEstarTabelaSimbolos = false });
             tokens.Add(new Token() { Nome = "close_parentheses", Descricao = "fechamento parenteses", Padrao = new Regex("[)]"), DeveEstarTabelaSimbolos = false });
-
+                        
             AnalisadorLexico analisador = new AnalisadorLexico();
             AnalisadorLexicoEntrada entrada = new AnalisadorLexicoEntrada();
 
-            entrada.ArquivoFonte = new FileInfo(@"C:\Development\FIAP\entrada.txt");
+            Console.WriteLine(Welcome);
+            Console.WriteLine("Informe o caminho completo para o arquivo de entrada:");
 
-            AnalisadorLexicoSaida saida = analisador.Processar(entrada, tokens);
-            saida.GerarArquivos(entrada.ArquivoFonte);
+            string caminhaArquivoEntrada = Console.ReadLine();
+            FileInfo arquivoEntrada = new FileInfo(caminhaArquivoEntrada);
 
-            Console.WriteLine("Fim");
+            if (arquivoEntrada.Exists)
+            {
+                entrada.ArquivoFonte = arquivoEntrada;
+
+                AnalisadorLexicoSaida saida = analisador.Processar(entrada, tokens);
+                saida.GerarArquivos(entrada.ArquivoFonte);
+
+                Console.WriteLine("Processo de análise finalizado, hash de identificação {0}", saida.Identificador);
+            }
+            else
+            {
+                Console.WriteLine("Arquivo de entrada não pode ser localizado");
+            }
 
             Console.Read();
         }

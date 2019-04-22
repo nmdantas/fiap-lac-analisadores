@@ -29,7 +29,7 @@ namespace Fiap.Lac.Analisadores.Modelos.ES
 
         #endregion
 
-        private string Identificador { get; }
+        public string Identificador { get; }
 
         public IList<string> FluxoTokens { get; internal set; }
 
