@@ -21,4 +21,20 @@ IList<Token> tokens = new List<Token>()
 ### Execução
 Para execução é necessário ter instalado o ``Visual Studio`` (versão 2017 ou superior) ou ``Visual Code`` + ``.NET Core 2.0``  
 
-[![Primeiro Passo](https://github.com/nmdantas/fiap-lac-analisadores/blob/master/imagens/passo-01.png)]
+*Abrir o Visual Studio*
+![Primeiro Passo](/imagens/passo-01.png)
+
+*Escolher o arquivo '.sln' (Solution) para a abrir os projetos*
+![Segundo Passo](/imagens/passo-02.png)
+
+*Abrir o menu lateral 'Solution Explorer'*
+![Terceiro Passo](/imagens/passo-03.png)
+
+*Clicar com o botão direito no projeto 'Fiap.Lac.Apresentacao' e selecionar a opção 'Set as StartUp Project'*
+![Quarto Passo](/imagens/passo-04.png)
+
+*Selecionar a opção 'Start Without Debungging' no menu Debug*
+![Quinto Passo](/imagens/passo-05.png)
+
+*Agora para testar o projeto basta seguir as orientações em tela*
+![Último Passo](/imagens/passo-06.png)
