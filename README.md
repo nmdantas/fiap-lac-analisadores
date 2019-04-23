@@ -20,3 +20,5 @@ IList<Token> tokens = new List<Token>()
 
 ### Execução
 Para execução é necessário ter instalado o ``Visual Studio`` (versão 2017 ou superior) ou ``Visual Code`` + ``.NET Core 2.0``  
+
+[![Primeiro Passo](https://github.com/nmdantas/fiap-lac-analisadores/blob/master/imagens/passo-01.png)]
