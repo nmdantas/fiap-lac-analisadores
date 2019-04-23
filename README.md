@@ -33,7 +33,7 @@ Para execução é necessário ter instalado o ``Visual Studio`` (versão 2017 o
 4. *Clicar com o botão direito no projeto 'Fiap.Lac.Apresentacao' e selecionar a opção 'Set as StartUp Project'*
 ![Quarto Passo](/imagens/passo-04.png)
 
-5. *Selecionar a opção 'Start Without Debungging' no menu Debug*
+5. *Selecionar a opção 'Start Without Debugging' no menu Debug*
 ![Quinto Passo](/imagens/passo-05.png)
 
 6. *Agora para testar o projeto basta seguir as orientações na tela* =)
