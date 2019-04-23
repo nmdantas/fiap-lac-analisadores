@@ -1,12 +1,11 @@
 # Linguagens, Autômatos e Computabilidade
-Projeto para criação de analisadores:
+Projeto para criação de analisadores
  - Léxico
  - Sintáticos
  - Semânticos
 
 ## Analisador Léxico
-Analisa um arquivo de entrada contendo expressões matemáticas e gera o fluxo de tokens e a tabela de símbolos.
-Tokens admitidos no analisador: 
+Analisa um arquivo de entrada contendo expressões matemáticas e gera o fluxo de tokens e a tabela de símbolos. Tokens admitidos no analisador 
 ```c#
 IList<Token> tokens = new List<Token>()
 {
@@ -18,3 +17,6 @@ IList<Token> tokens = new List<Token>()
 	new Token() { Nome = "close_parentheses", Descricao = "fechamento parenteses", Padrao = new Regex("[)]"), DeveEstarTabelaSimbolos = false }
 };
 ```
+
+### Execução
+Para execução é necessário ter instalado o ``Visual Studio`` (versão 2017 ou superior) ou ``Visual Code`` + ``.NET Core 2.0``  
