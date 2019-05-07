@@ -30,13 +30,14 @@ namespace Fiap.Lac.Apresentacao
     _____|                                                                     |
      ____|                  PROFESSOR FABIO HENRIQUE PIMENTEL                  |
       ___|                  ---------------------------------                  |
-       __|                  ------  ANALISADOR LEXICO  ------                  |
+       __|                  --- ANALISADOR LEXICO - 1.1.0 ---                  |
         _|                  ---------------------------------                  |
          |_____________________________________________________________________|
 
 ";
         private static readonly IList<Token> tokens = new List<Token>()
         {
+            new Token() { Nome = "id", Descricao = "letra seguida por letras/digitos", Padrao = new Regex("(_|[A-z])((_|[A-z])|[0-9])*"), DeveEstarTabelaSimbolos = true },
             new Token() { Nome = "number", Descricao = "constantes numericas", Padrao = new Regex("[0-9]"), DeveEstarTabelaSimbolos = true },
             new Token() { Nome = "operator", Descricao = "operadores aritmeticos", Padrao = new Regex("[+|\\-|*|/]"), DeveEstarTabelaSimbolos = true },
             new Token() { Nome = "assignment", Descricao = "atribuicao de valores", Padrao = new Regex("[=]"), DeveEstarTabelaSimbolos = false },

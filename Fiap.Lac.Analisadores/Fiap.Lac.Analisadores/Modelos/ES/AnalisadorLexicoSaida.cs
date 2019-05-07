@@ -14,17 +14,17 @@ namespace Fiap.Lac.Analisadores.Modelos.ES
         private const string FormatoNomeArquivoFluxoTokens    = "{0}/{1}-fluxo-tokens.txt";
         private const string FormatoNomeArquivoTabelaSimbolos = "{0}/{1}-tabela-simbolos.txt";
         private const string FormatoCabecalhoArquivoTabelaSimbolos =
-@"+===========================================================================================+
-| END     LEXEMA     TOKEN               PADRAO                   OCORRENCIA                |
-+===========================================================================================+
+@"+======================================================================================================+
+| END     LEXEMA     TOKEN               PADRAO                              OCORRENCIA                |
++======================================================================================================+
 ";
-        private const string FormatoSeparadorLinhaArquivoTabelaSimbolos = "+-------------------------------------------------------------------------------------------+";
-        private const string FormatoRodapeArquivoTabelaSimbolos = "+===========================================================================================+";
+        private const string FormatoSeparadorLinhaArquivoTabelaSimbolos = "+------------------------------------------------------------------------------------------------------+";
+        private const string FormatoRodapeArquivoTabelaSimbolos = "+======================================================================================================+";
 
         private const int TamanhoCampoEndereco = 8;
         private const int TamanhoCampoLexema = 11;
         private const int TamanhoCampoToken = 20;
-        private const int TamanhoCampoPadrao = 25;
+        private const int TamanhoCampoPadrao = 36;
         private const int TamanhoCampoOcorrencia = 25;
 
         #endregion
